@@ -12,7 +12,7 @@
 
 ---
 
-![XorrDev's Stats](https://github-readme-stats.vercel.app/api?username=xorrdev&theme=material-palenight&show_icons=true)
+![XorrDev's Stats](https://github-readme-stats.vercel.app/api?username=xorrdev&theme=onedark&show_icons=true)
 
 ---
 
