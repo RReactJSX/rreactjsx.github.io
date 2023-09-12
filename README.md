@@ -1,6 +1,6 @@
 ### Hey 👋🚀
 
-#### I'm an Indie developer and student in the bay area of California. 
+#### I'm an Indie developer and student on the Central Coast of California. 
 
 ## Languages & Frameworks:
 <div>
