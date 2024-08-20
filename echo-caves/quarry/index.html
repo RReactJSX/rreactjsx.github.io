@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en" class=background>
+    <title>
+        Echo Caves - Quarry
+    </title>
+    <head>
+        
+        <link rel="icon" href="../../images/ECicon128.png">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/banner.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="stylesheet" href="styles/product.css">
+    <body id="body">
+        <div class="title-wrapper">
+            <img id="nav-logo" src="images\ec-logo.png">
+            <div id="title-container">
+                <h1 id="title">ECHO Quarry</h1>
+                <h2 id="sub-header">The Official repository for ECHO Caves themes.</h2>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <nav id="NAV">
+                <div class="button-wrapper">
+                    <button class="search-buttons" focus id="tagALL">
+                        All Themes
+                    </button>
+                    <button class="search-buttons" id="tagOT">
+                        Developer Themes
+                    </button>
+                    <button class="search-buttons" id="tagCT">
+                        Community Themes
+                    </button>
+                    <button class="search-buttons" id="tagDT">
+                        Dark Themes
+                    </button>
+                    <button class="search-buttons" id="tagLT">
+                        Light Themes
+                    </button>
+                    <button class="search-buttons" id="tagRA">
+                        Recently Added
+                    </button>   
+                </div>
+                <div class="search-wrapper">
+                    <input id="search" onkeyup="searchThemes()" type="search" placeholder="Find a Theme...">
+                </div>
+            </nav>    
+        </div>
+        <div id="products">
+            <div id="products-wrapper">
+                <div id="card-volcano" isDeveloper="true" isDark="true" isNew="true" class="product-card">
+                    <div class="product-image">
+                        <img src="images/thumbnail-volcano.png">
+                    </div>
+                    <div class="product-description">
+                        <div class="product-details-wrapper">
+                            <p class="product-title">Volcano</p>
+                            <p class="product-dev">ECHO Caves Team</p> 
+                        </div>
+                        <div class="product-moreInfo-wrapper" id="moreInfo-volcano">
+                            <image src=images/info-icon.svg class="product-moreInfo" onload="SVGInject(this)">
+                        </div> 
+                    </div>
+                </div>
+                <div id="card-whisps" isDeveloper="true" isDark="true" isNew="true" class="product-card">
+                    <div class="product-image">
+                        <img src="images/thumbnail-whisps.png">
+                    </div>
+                    <div class="product-description">
+                        <div class="product-details-wrapper">
+                            <p class="product-title">Whisps</p>
+                            <p class="product-dev">ECHO Caves Team</p> 
+                        </div>
+                        <div class="product-moreInfo-wrapper" id="moreInfo-whisps">
+                            <image src=images/info-icon.svg class="product-moreInfo" onload="SVGInject(this)">
+                        </div> 
+                    </div>
+                </div>
+                <div id="card-volcano" isDeveloper="true" isDark="true" isNew="true" class="product-card">
+                    <div class="product-image">
+                        <img src="images/thumbnail-vanta.png">
+                    </div>
+                    <div class="product-description">
+                        <div class="product-details-wrapper">
+                            <p class="product-title">Vanta</p>
+                            <p class="product-dev">ECHO Caves Team</p> 
+                        </div>
+                        <div class="product-moreInfo-wrapper" id="moreInfo-vanta">
+                            <image src=images/info-icon.svg class="product-moreInfo" onload="SVGInject(this)">
+                        </div> 
+                    </div>
+                </div>
+                <div id="card-volcano" isDeveloper="true" isDark="true" isNew="true" class="product-card">
+                    <div class="product-image">
+                        <img src="images/thumbnail-orion.png">
+                    </div>
+                    <div class="product-description">
+                        <div class="product-details-wrapper">
+                            <p class="product-title">Orion</p>
+                            <p class="product-dev">ECHO Caves Team</p> 
+                        </div>
+                        <div class="product-moreInfo-wrapper" id="moreInfo-orion">
+                            <image src=images/info-icon.svg class="product-moreInfo" onload="SVGInject(this)">
+                        </div> 
+                    </div>
+                </div>
+                <div id="card-volcano" isDeveloper="true" isDark="true" isNew="true" class="product-card">
+                    <div class="product-image">
+                        <img src="images/thumbnail-dracula.png">
+                    </div>
+                    <div class="product-description">
+                        <div class="product-details-wrapper">
+                            <p class="product-title">Dracula</p>
+                            <p class="product-dev">ECHO Caves Team</p> 
+                        </div>
+                        <div class="product-moreInfo-wrapper" id="moreInfo-dracula">
+                            <image src=images/info-icon.svg class="product-moreInfo" onload="SVGInject(this)">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts\nav.js"></script>
+        <script src="scripts\moreInfo.js"></script>
+        <script src="scripts\svg-inject.min.js"></script>
+    </body>
+</html>

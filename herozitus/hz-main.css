@@ -1,0 +1,218 @@
+@font-face {
+    font-family: pixel;
+    src: url(./fonts/alphbeta-webfont.woff);
+}
+
+#title-container {
+    background-image: url(./media/HeroZitusBR.gif);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    font-family: pixel;
+}
+#head {
+    font-size: 60px;
+    color:#56c054;
+}
+.title-group {
+    margin:auto;
+    width:650px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:#103f6694;
+}
+.icon-group {
+    padding-top: 4em;
+}
+.sub-head {
+    font-size: 25px;
+    color:#3bc5be;
+}
+body {
+    margin:
+    0px;
+    padding:0px;
+    background:#115088;
+}
+.nav-bar {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background:#3a7739;
+}
+.nav-btn {
+    background-color: #4395d8;
+    color: #FFF;
+    padding:0.5em;
+    font-size: 25px;
+    font-family: pixel;
+    width:200px;
+    text-overflow: ellipsis;
+    border: 2px solid white;
+}
+.nav-btn:hover {
+    cursor: pointer;
+    background-color: #296291;
+}
+.nav-btn-container {
+    margin:20px;
+}
+#nav-wrapper {
+    margin: auto;
+    width:100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    display: flex;
+}
+
+.description {
+    color: #fff;
+    font-family: pixel;
+    font-size: 30px;
+    line-height: 1.2em;
+}
+.description-accent-1 {
+    color:#69ace2;
+}
+
+.description-accent-2 {
+    color: #56c054;
+    font-size: 45px;
+}
+
+.flexbox, .flexbox-commands {
+    flex-wrap: nowrap;
+    display: flex;
+    background-color:#113363;
+    margin:4em;
+}
+.category, .category-commands {
+    margin: 2em;
+    margin-top: 4em;
+}
+.category {
+    width:50%;
+}
+.category-commands {
+    width:100%;
+}
+.centered-category {
+    text-align: center;
+    vertical-align: middle;
+    margin:auto;
+}
+.sub-header {
+    color: #56c054;
+    font-family: pixel;
+    font-size: 60px;
+}
+
+
+body::-webkit-scrollbar {
+    width: 25px;               /* width of the entire scrollbar */
+}
+  body::-webkit-scrollbar-track {
+    background: #132331;        /* color of the tracking area */
+}
+  body::-webkit-scrollbar-thumb {
+    background-color: #00FFF2;    /* color of the scroll thumb */
+}
+
+th, td {
+    padding:20px;
+    height:30px;
+    text-align: center;
+    font-family:pixel;
+}
+th {
+    font-size: 35px;
+    color: #00FFF2;
+    margin:10px;
+    border: 5px solid #3A7739;
+}
+td {
+    font-size: 18px;
+    color: #FFF;
+    height: 14px;
+    padding-bottom:50px;
+}
+
+table {
+    margin:0;
+    width:50%
+}
+
+#addHero:hover {
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(0%)
+}
+#addHero:not(:hover){
+    transition: all 0.4s ease-in-out;
+    filter: grayscale(100%)
+}
+
+
+.divTableRow {
+    border-bottom: 4px solid #1e6099;
+    border-left: 4px solid #1e6099;
+    border-right: 4px solid #1e6099;
+    flex-wrap: nowrap;
+    display: flex;
+    padding-left: 8px;
+    padding-right: 8px;
+
+}
+.divTableHead {
+    border-top: 12px solid #398dd6;
+    border-left: 12px solid #398dd6;
+    border-right: 12px solid #398dd6;
+    border-bottom: 12px solid #398dd6;
+    flex-wrap: nowrap;
+    display: flex;
+}
+.divTableCell {
+    padding: 20px;
+    padding-left:40px;
+    border-right: 4px solid #1e6099;
+}
+.divTableCell:nth-of-type(3n) {
+    border-right: none;
+}
+.commandCellHead {
+    width:25%;
+}
+.descriptionCellHead {
+    width:50%;
+}
+.useCellHead {
+    width:30%;
+}
+.commandCell {
+    width:25%;
+    color: #67e763;
+    font-size: 20px;
+}
+.descriptionCell {
+    width:50%;
+    color: #69ace2;
+    font-size: 20px;
+}
+.useCell {
+    width:30%;
+    color: #9affe1;
+    font-size: 20px;
+}
+.command-args {
+    color:#ff73ff;
+}
+.cellheader {
+    color: #FFF;
+    font-size: 30px;
+}
+.divTable {
+    padding:6em;
+    font-family: pixel;
+    line-height:1.5em;
+}
+#addhero:hover {
+    cursor: pointer;
+}

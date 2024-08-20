@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;500&display=swap");
+html, body {
+  font-family: "Changa", sans-serif;
+  background-color: #0e0f19;
+  margin: 0;
+  padding: 0;
+}
+
+#head-wrapper {
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-left: 5em;
+}
+#head-wrapper h2 {
+  font-size: 56px;
+  margin: 0;
+}
+#head-wrapper p {
+  margin: 0;
+  color: #b5d6f5;
+  font-size: 18px;
+}
+#head-wrapper div {
+  padding: 2em;
+}
+
+a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#head-container {
+  background-color: #23243D;
+}
+
+#nav-container {
+  background-color: #32345a;
+  height: 4.4em;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+#nav-wrapper {
+  padding-left: 5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+.socials-wrapper {
+  float: right;
+  margin-right: 5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button, .nav-icon {
+  font-family: "Changa", sans-serif;
+  background-color: #4e518c;
+  color: #FFF;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  height: 100%;
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+  padding: 0;
+  margin: 0em 0.2em 0em 0.2em;
+  fill: #000;
+}
+.nav-button span, .nav-icon span {
+  color: #F08651;
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
+.nav-button:hover, .nav-icon:hover {
+  background-color: #F08651;
+  color: #000;
+  cursor: pointer;
+  transform: 56px;
+}
+.nav-button:hover span, .nav-icon:hover span {
+  color: #FFF;
+}
+.nav-button:first-child, .nav-icon:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+.nav-button:last-child, .nav-icon:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+.nav-button img, .nav-icon img {
+  max-width: 40px;
+}
+
+.dropdown-projects {
+  display: none;
+  position: absolute;
+  background-color: #4e518c;
+  border: #F08651 2px solid;
+  width: 124px;
+  z-index: 1;
+  padding: 0;
+  border-radius: 0px 0px 10px 10px;
+  color: #FFF;
+}
+.dropdown-projects a:hover {
+  color: #F08651;
+}
+
+#nav-projects:hover .dropdown-projects {
+  display: block;
+}
+
+.nav-button {
+  width: 8rem;
+  height: 48px;
+  background-color: #4e518c;
+}
+
+.nav-icon {
+  width: 3em;
+  height: 48px;
+  vertical-align: middle;
+}
+
+#nav-home {
+  background-color: #F08651;
+  width: 3em;
+}
+#nav-home:hover {
+  cursor: default;
+}
+
+#menu-container {
+  padding: 4em;
+  text-align: center;
+  justify-content: center;
+}
+
+#menu-wrapper {
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  border-radius: 25px 25px 25px 25px;
+  padding: 20em;
+}
+#menu-wrapper p {
+  color: #FFF;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=home.css.map */
