@@ -1,0 +1,22 @@
+.title-wrapper {
+    padding: 2em;
+    display: flex;
+    background-color: #181818;
+}
+
+#title-container {
+    padding: 0em 2em;
+}
+#title {
+    color: #ffffff;
+    font-size: 55px;
+    margin: 0;
+    padding: 0;
+}
+#nav-logo {
+    max-height: 125px;
+}
+#sub-header {
+    color: #CF86FF;
+    margin: 0.8em 0em 0em 0;
+}

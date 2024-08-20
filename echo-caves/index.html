@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns/website#" lang="en" class="background">
+    <title>
+        Echo Caves - Home
+    </title>
+    <head>
+        <meta property="og:title" content="ECHO Caves"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:description" content="A browser extension that brings a dark mode to the New Tech Network ECHO portal powered by Agilix Buzz." />
+        <meta property="og:url" content="https://reactivepeakstudios.ml/echo-caves"/>
+        <meta property="og:image:width" content="1280"/>
+        <meta property="og:image:height" content="599"/>
+        <meta property="og:image" content="https://reactivepeakstudios.ml/images/ECThemeComparison.png"/>
+        <meta name="google-site-verification" content="_pcxy5FJ5aZONIMm6jz8_pc8DQSQRvH-738-8sMCWMk"/>
+        <link rel="icon" href="../images/ECicon128.png">
+        <link rel="stylesheet" href="ec.css">
+        <div id="floatMenu">
+            <button class="FMButton" id="FMBtp" onclick="BackToProjects()">
+                Back To Projects
+            </button>
+            <button class="FMButton" id="FMEchoCaves">
+                Echo Caves
+            </button>
+            <button class="FMButton" id="FMCatalog" onclick="quarry()">
+                Catalog
+            </button>
+            <button class="FMButton" id="FMTp" onclick="Themepunk()">
+                Themepunk
+            </button>
+            <button class="FMButton" id="FMCl" onclick="Changelog()">
+                Change Log
+            </button>
+            <button class="FMButton" id="FMAbout" onclick="About()">
+                About
+            </button>
+        </div>
+        <div id="staticMenu">
+            <button class="SMButton" id="SMBtp" onclick="BackToProjects()">
+                Back To Projects
+            </button>
+            <button class="SMButton" id="SMEchoCaves">
+                Echo Caves
+            </button>
+            <button class="SMButton" id="SMCatalog" onclick="Catalog()">
+                Catalog
+            </button>
+            <button class="SMButton" id="SMTp" onclick="Themepunk()">
+                Themepunk
+            </button>
+            <button class="SMButton" id="SMCl" onclick="Changelog()">
+                Changelog
+            </button>
+            <button class="SMButton" id="SMAbout" onclick="About()">
+                About
+            </button>
+          </div>
+        <h1 id="title">
+            ECHO Caves
+        </h1> 
+        <p id="descF">
+        </p>
+    </head> 
+    <body onscroll="Scrolled()" id="body" onresize="logoVisibility()">
+        <script type="text/javascript" src="ec.js"></script>
+    </body>
+</html>
