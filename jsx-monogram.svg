@@ -1,0 +1,43 @@
+<svg width="492" height="512" viewBox="0 0 492 512" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1_2)">
+<rect width="492" height="512" fill="#3E4840"/>
+<rect width="100" height="65" fill="url(#pattern0_1_2)"/>
+<rect x="246" width="100" height="65" fill="url(#pattern1_1_2)"/>
+<rect x="123" y="128" width="100" height="65" fill="url(#pattern2_1_2)"/>
+<rect x="369" y="128" width="100" height="65" fill="url(#pattern3_1_2)"/>
+<rect y="256" width="100" height="65" fill="url(#pattern4_1_2)"/>
+<rect x="246" y="256" width="100" height="65" fill="url(#pattern5_1_2)"/>
+<rect x="123" y="384" width="100" height="65" fill="url(#pattern6_1_2)"/>
+<rect x="369" y="384" width="100" height="65" fill="url(#pattern7_1_2)"/>
+</g>
+<defs>
+<pattern id="pattern0_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern1_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern2_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern3_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern4_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern5_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern6_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<pattern id="pattern7_1_2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_2" transform="scale(0.01 0.0153846)"/>
+</pattern>
+<clipPath id="clip0_1_2">
+<rect width="492" height="512" fill="white"/>
+</clipPath>
+<image id="image0_1_2" width="100" height="65" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABBCAYAAAAngwHRAAAAAXNSR0IArs4c6QAAAYlJREFUeJzt3DFKA0EYQGFXxFxjU6fxENpIem8leAYPYKM26gVSBASxMeymE0Sr9Mbe/xeWnc3yDO8rhwyb5DmMm5CpDhKX11dh7PH2Yft77HR+VmXzd615a8JYu8rG2jGeTlBP6/Berdt1eK9eFy9h7uGOnpN6MgiMQWAMAnNUMrlko8/mDq2e1r3nZpvwH9cY9HW4QmAMAmMQGIPAVNldeWaMTXifdf0nwRUCYxAYg8AYBCa9U3cDH17Xj+RdITAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxCY6vxi7kftIK4QGIPAGATGIDAGgTEIjEFgDAJjEBiDwBgExiAwBoExCIxBYAwCYxAYg8AYBKbo8JnsoJnt90d43NP98158b7/ZNOH1fn3Gv+mSA2lcITAGgTEIjEFg0sNnSn6nPsaJcrOTWbjGcrEMj5scT3pfY4wT5fyd+j9gEBiDwBgEJr1TzzbmrptwydGxJWfJv9/cZcODbsxDb+AZVwiMQWAMAmMQmB9FcWHC6HAmRAAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
