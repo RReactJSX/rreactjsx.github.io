@@ -1,117 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethan Quaresma - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./rreactjsx.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rreactjsx.github.io/" />
+  <meta property="og:title" content="Ethan Quaresma – Tech Nerd And Business Owner" />
+  <meta property="og:description" content="I’m a passionate engineer and business owner building high-performance software and machines." />
+  <meta property="og:image" content="./rreactjsx-banner.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rreactjsx.github.io/" />
+  <meta name="twitter:title" content="Ethan Quaresma – Tech Nerd And Business Owner" />
+  <meta name="twitter:description" content="I’m a passionate engineer and business owner building high-performance software and machines." />
+  <meta name="twitter:image" content="./rreactjsx-banner.pngg" />
+
+  <title>Ethan Quaresma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#1a1a1a',
+            surface: '#2E2F2D',
+            accent: '#EBFF65',
+            text: '#f0f0f0',
+            faded: '#a1abb6',
+            greenAccent: '#8DA391',
+            overlay: '#231f20',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    
-    <header>
-        <nav style="width: 50%; margin:0;background-color: #2b2b2b;padding:1em;">
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="nav-menu" style="justify-content: left; height: 30px;"">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-        <div class="logo" id="logo-container">
-            <img src="rreactjsx.png" alt="Ethan Quaresma Logo">
+
+<body class="bg-background text-text font-mono tracking-tight">
+
+  <!-- Header -->
+  <header id="main-header" class="sticky top-0 z-50 h-40 flex items-center justify-between border-b-4 border-accent bg-surface transition-all duration-500">
+    <!-- Left Nav -->
+    <nav id="left-nav" class="h-full flex items-center bg-surface px-8 w-1/2 transition-opacity duration-300">
+      <ul class="flex gap-4 text-white font-bold text-lg">
+        <li><a href="#about" class="hover:text-accent transition">About Me</a></li>
+        •
+        <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Center Logo -->
+    <div id="logo-wrapper" class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-500">
+        <div id="logo-bg" class="transition-all duration-500">
+          <img id="logo-img" src="rreactjsx.png" alt="Ethan Quaresma Logo" class="h-20 object-contain transition-all duration-500" />
         </div>
-        <nav style="width: 50%; margin:0;background-color: #8DA391;padding:1em;">
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="nav-menu" style="justify-content: right; height: 30px;">
-                <li><img src="./media/socials/Bluesky.png" style="color:#000;"></img></li>
-                <li><img src="./media/socials/Secondbyte.png" style="color:#000;"></img></li>
-                <li><img src="./media/socials/Linkedin.png" style="color:#000;"></img></li>
-                <li><img src="./media/socials/Github.png" style="color:#000;"></img></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+      
+  
+    <!-- Right Nav -->
+    <nav id="right-nav" class="h-full flex items-center justify-end bg-greenAccent px-8 w-1/2 transition-opacity duration-300">
+      <ul class="flex gap-4 items-center">
+        <li><a href="https://bsky.app/profile/ethan.secondbyte.co" target="_blank" rel="noopener noreferrer"><img src="./media/socials/Bluesky.png" class="w-8 h-8" alt="Bluesky" /></a></li>
+        <li><a href="https://instagram.com/mstr.ceo" target="_blank" rel="noopener noreferrer"><img src="./media/socials/Secondbyte.png" class="w-8 h-8" alt="Instagram" /></a></li>
+        <li><a href="https://linkedin.com/in/ethan-quaresma" target="_blank" rel="noopener noreferrer"><img src="./media/socials/Linkedin.png" class="w-8 h-8" alt="LinkedIn" /></a></li>
+        <li><a href="https://github.com/rreactjsx" target="_blank" rel="noopener noreferrer"><img src="./media/socials/Github.png" class="w-8 h-8" alt="GitHub" /></a></li>
+      </ul>
+    </nav>
+  </header>
+  
 
-    <section id="hero">
-        <div class="hero-bg"></div>
-        <h1 id="name-display">Ethan Quaresma</h1>
-        <p>Tech Nerd And Business Owner</p>
-        <a href="#projects" id="view-projects" class="cta-btn">View My Work</a>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero" class="relative flex flex-col justify-center items-center h-[50vh] text-center px-5 py-24 bg-[url('jsx-monogram.svg')] bg-repeat bg-[length:650px] bg-center bg-overlay z-10">
+    <div class="absolute inset-0 bg-overlay/60 z-[-1] pointer-events-none"></div>
+    <h1 class="text-5xl text-accent tracking-tight font-bold mb-5">Ethan Quaresma</h1>
+    <p class="text-2xl text-faded mb-8 tracking-tight">Tech Nerd And Business Owner</p>
+    <a href="#projects" class="text-white border-2 border-accent rounded-full px-6 py-2 text-lg font-extrabold hover:bg-accent hover:text-black transition">View My Work</a>
+  </section>
 
-    <section id="about">
-        <div class="about-content">
-            <div class="bio">
-               <h1>Who Am I</h1>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                numquam blanditiis.</p>
-            </div>
-            <div class="gallery">
-                <img src="./media/image_1.png" alt="Ethan Quaresma">
-                <img src="./media/image_2.png" alt="Ethan Quaresma">
-                <img src="./media/image_3.png" alt="Ethan Quaresma">
-            </div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div id="project-grid"></div>
-        <button id="show-more-btn">Show More</button>
+  <!-- About Section -->
+  <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-background border-y-2 border-accent">
+    <div class="max-w-6xl mx-auto">
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
-    </section>
-    
-    
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <ul>
-                    <li>C#</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Frameworks</h3>
-                <ul>
-                    <li>Node.js</li>
-                    <li>Svelte.js</li>
-                    <li>Git/GitHub</li>
-                    <li>Digital Ocean</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Certifications</h3>
-                <ul>
-                    <li><img src="security-plus.png" style="width: 150px;"></li>
-                </ul>
-            </div>
+        <div class="h-full text-faded text-lg text-left">
+            <h1 class="pt-0 text-3xl font-extrabold text-accent pb-8 tracking-tight sm:text-3xl">
+                Who Am I
+            </h1>
+            <p class="mb-6">I’m a passionate engineer and business owner building high-performance software and machines. I blend a love for design with sharp logic and business strategy.</p>
+            <p>My goal is to create solutions that are not only powerful and efficient but also elegant and intuitive. I thrive in environments where I can tackle complex challenges and bring innovative ideas to life.</p>
         </div>
-    </section>
-    <section id="accomplishments">
-        <h2>Badges Earned</h2>
-        <div style="text-align: center;">
-            <img src="https://holopin.me/reactjs" alt="Holopin ReactJS Certificate">
+  
+        <div class="grid grid-cols-2 grid-rows-2 gap-4 h-80">
+          <img src="./media/image_1.png" alt="Image 1" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 border-2 border-white col-span-1 row-span-2">
+          <img src="./media/image_2.png" alt="Image 2" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 border-2 border-white col-span-1 row-span-1">
+          <img src="./media/image_3.png" alt="Image 3" class="w-full h-full object-cover rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105 border-2 border-white col-span-1 row-span-1">
         </div>
-    </section>
-    
-    <footer>
-        <p>© 2024 Ethan Quaresma. All rights reserved.</p>
-    </footer>
+      </div>
+    </div>
+  
+    <div class="mt-24">
+        <div class="flex justify-center gap-8 max-w-6xl mx-auto">
+      
+          <!-- Left Column: Languages & Frameworks (Full Width) -->
+          <div class="flex flex-col gap-8 w-full">
+      
+            <!-- Languages -->
+            <div class="bg-surface p-8 rounded-xl w-full transform transition-transform duration-300 border border-greenAccent hover:-translate-y-2 hover:shadow-2xl">
+              <h3 class="text-white/80 uppercase text-2xl mb-6 font-bold text-left">Languages</h3>
+              <ul class="text-faded text-left text-lg flex flex-wrap gap-x-3 gap-y-2">
+                <li>C#</li>
+                <li class="before:content-['•'] before:mx-2">HTML</li>
+                <li class="before:content-['•'] before:mx-2">CSS</li>
+                <li class="before:content-['•'] before:mx-2">Python</li>
+                <li class="before:content-['•'] before:mx-2">JavaScript</li>
+                <li class="before:content-['•'] before:mx-2">TypeScript</li>
+              </ul>
+            </div>
+      
+            <!-- Tools & Frameworks -->
+            <div class="bg-surface p-8 rounded-xl w-full transform transition-transform duration-300 border border-greenAccent hover:-translate-y-2 hover:shadow-2xl">
+              <h3 class="text-white/80 text-2xl mb-6 font-bold uppercase text-left">Tools & Frameworks</h3>
+              <ul class="text-faded text-left text-lg flex flex-wrap gap-x-3 gap-y-2">
+                <li>Svelte / SvelteKit</li>
+                <li class="before:content-['•'] before:mx-2">Node.js</li>
+                <li class="before:content-['•'] before:mx-2">PostgreSQL</li>
+                <li class="before:content-['•'] before:mx-2">Tailwind CSS</li>
+                <li class="before:content-['•'] before:mx-2">Stripe API</li>
+                <li class="before:content-['•'] before:mx-2">Git / GitHub</li>
+                <li class="before:content-['•'] before:mx-2">DigitalOcean</li>
+                <li class="before:content-['•'] before:mx-2">Proxmox</li>
+                <li class="before:content-['•'] before:mx-2">WordPress + Elementor</li>
+                <li class="before:content-['•'] before:mx-2">Docker</li>
+                <li class="before:content-['•'] before:mx-2">Unifi Controller</li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Certifications (Remains Standard Card) -->
+          <div class="bg-surface p-8 rounded-xl w-[50%] transform transition-transform duration-300 border border-greenAccent hover:-translate-y-2 hover:shadow-2xl flex flex-col justify-between items-center">
+            <h3 class="text-white/80 text-2xl font-bold text-center uppercase">Certifications</h3>
+            <div class="flex-grow flex items-center justify-center w-full">
+              <img src="security-plus.png" alt="Security+ Certification" class="w-36 transition-transform duration-300 ease-in-out hover:opacity-90" />
+            </div>
+          </div>
+          
+            
+          </div>
+      
+        </div>
+      </div>
+      
 
-    <script src="scripts.js"></script>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="text-center py-24 px-5 bg-background">
+    <h2 class="text-accent text-3xl mb-12 font-semibold">Projects</h2>
+    <div id="project-grid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto"></div>
+    <button id="show-more-btn" class="mt-12 border-2 border-accent hover:bg-accent hover:text-black text-white px-6 py-3 rounded-full text-lg transition font-extrabold">Show More</button>
+  </section>
+
+  <!-- Accomplishments -->
+
+  <!-- Footer -->
+  <footer class="bg-background text-faded border-t-2 border-accent py-6 text-center">
+    <p>© 2024 Ethan Quaresma. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+    

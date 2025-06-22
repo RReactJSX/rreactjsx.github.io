@@ -12,22 +12,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
 
 
 document.addEventListener("DOMContentLoaded", async () => {
     const projectGrid = document.getElementById('project-grid');
     const showMoreBtn = document.getElementById('show-more-btn');
-    const githubUser = 'xorrdev'; // Replace with your GitHub username
+    const githubUser = 'rreactjsx'; // Replace with your GitHub username
 
     let allRepos = [];
     let displayedRepos = 0;
-    const reposPerPage = 4;
+    const reposPerPage = 6;
     let isLoading = false; // Flag to indicate loading state
 
     // Fetch public repositories from GitHub
@@ -52,27 +54,43 @@ document.addEventListener("DOMContentLoaded", async () => {
         const reposToShow = allRepos.slice(displayedRepos, end);
 
         for (const repo of reposToShow) {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card');
+          const projectCard = document.createElement("div");
+          projectCard.className =
+            "bg-surface text-left p-6 rounded-xl shadow-md hover:shadow-2xl transition duration-300 flex flex-col justify-between border border-greenAccent min-h-[260px]";
 
-            const projectTitle = document.createElement('h3');
-            projectTitle.textContent = repo.name;
+          // Title
+          const projectTitle = document.createElement("h3");
+          projectTitle.textContent = repo.name;
+          projectTitle.className = "text-white/80 uppercase text-xl font-bold mb-2";
 
-            const projectDescription = document.createElement('p');
-            projectDescription.textContent = repo.description || 'No description available';
+          // Description
+          const projectDescription = document.createElement("p");
+          projectDescription.textContent =
+            repo.description || "No description available.";
+          projectDescription.className =
+            "text-faded text-sm flex-grow mb-6 line-clamp-3";
 
-            const viewButton = document.createElement('a');
-            viewButton.href = repo.html_url;
-            viewButton.target = '_blank';
-            viewButton.textContent = 'View Project';
-            viewButton.classList.add('cta-btn'); // Add class "cta-button"
-            
-            projectCard.appendChild(projectTitle);
-            projectCard.appendChild(projectDescription);
-            projectCard.appendChild(viewButton);
+          // Button wrapper (pinned to bottom)
+          const buttonWrapper = document.createElement("div");
+          buttonWrapper.className = "mt-auto pt-4";
 
-            projectGrid.appendChild(projectCard);
+          // View Project Button
+          const viewButton = document.createElement("a");
+          viewButton.href = repo.html_url;
+          viewButton.target = "_blank";
+          viewButton.textContent = "View Project";
+          viewButton.className =
+            "inline-block w-full text-center px-4 py-2 text-sm font-extrabold bg-greenAccent/20 text-white border-4 border-accent/30 rounded-full hover:bg-accent hover:text-black transition duration-300";
+
+          buttonWrapper.appendChild(viewButton);
+
+          projectCard.appendChild(projectTitle);
+          projectCard.appendChild(projectDescription);
+          projectCard.appendChild(buttonWrapper);
+
+          projectGrid.appendChild(projectCard);
         }
+          
 
         displayedRepos += reposPerPage;
 
@@ -109,3 +127,45 @@ document.addEventListener("DOMContentLoaded", async () => {
     await fetchGitHubRepos();
 });
 
+
+
+
+  const header = document.getElementById('main-header');
+  const logo = document.getElementById('logo-img');
+  const logoWrapper = document.getElementById('logo-wrapper');
+  const leftNav = document.getElementById('left-nav');
+  const rightNav = document.getElementById('right-nav');
+
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 100;
+
+    if (scrolled) {
+      // Shrink header and logo
+      header.classList.add('h-16', 'bg-transparent', 'border-none');
+      header.classList.remove('h-40', 'bg-surface', 'border-b-4', 'border-accent');
+
+      logo.classList.remove('h-20');
+      logo.classList.add('h-10');
+
+      logoWrapper.classList.remove('top-1/2', '-translate-y-1/2');
+      logoWrapper.classList.add('top-2');
+
+      // Hide navs
+      leftNav.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+      rightNav.classList.add('opacity-0', 'pointer-events-none', 'invisible');
+    } else {
+      // Restore header and logo
+      header.classList.remove('h-16', 'bg-transparent', 'border-none');
+      header.classList.add('h-40', 'bg-surface', 'border-b-4', 'border-accent');
+
+      logo.classList.remove('h-10');
+      logo.classList.add('h-20');
+
+      logoWrapper.classList.add('top-1/2', '-translate-y-1/2');
+      logoWrapper.classList.remove('top-2');
+
+      // Show navs
+      leftNav.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+      rightNav.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
+    }
+  });
