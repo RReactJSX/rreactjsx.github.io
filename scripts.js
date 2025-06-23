@@ -56,19 +56,20 @@ document.addEventListener("DOMContentLoaded", async () => {
         for (const repo of reposToShow) {
           const projectCard = document.createElement("div");
           projectCard.className =
-            "bg-surface text-left p-6 rounded-xl shadow-md hover:shadow-2xl transition duration-300 flex flex-col justify-between border border-greenAccent min-h-[260px]";
+            "bg-surface text-left p-4 sm:p-6 rounded-xl shadow-md hover:shadow-2xl transition duration-300 flex flex-col justify-between border border-greenAccent min-h-[240px]";
 
           // Title
           const projectTitle = document.createElement("h3");
           projectTitle.textContent = repo.name;
-          projectTitle.className = "text-white/80 uppercase text-xl font-bold mb-2";
+          projectTitle.className =
+            "text-white/80 uppercase text-lg sm:text-xl font-bold mb-2";
 
           // Description
           const projectDescription = document.createElement("p");
           projectDescription.textContent =
             repo.description || "No description available.";
           projectDescription.className =
-            "text-faded text-sm flex-grow mb-6 line-clamp-3";
+            "text-faded text-sm sm:text-base flex-grow mb-4 line-clamp-3";
 
           // Button wrapper (pinned to bottom)
           const buttonWrapper = document.createElement("div");
@@ -81,6 +82,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           viewButton.textContent = "View Project";
           viewButton.className =
             "inline-block w-full text-center px-4 py-2 text-sm font-extrabold bg-greenAccent/20 text-white border-4 border-accent/30 rounded-full hover:bg-accent hover:text-black transition duration-300";
+
+          // Append elements
+          buttonWrapper.appendChild(viewButton);
+          projectCard.appendChild(projectTitle);
+          projectCard.appendChild(projectDescription);
+          projectCard.appendChild(buttonWrapper);
+
 
           buttonWrapper.appendChild(viewButton);
 
@@ -130,42 +138,59 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 
-  const header = document.getElementById('main-header');
-  const logo = document.getElementById('logo-img');
-  const logoWrapper = document.getElementById('logo-wrapper');
-  const leftNav = document.getElementById('left-nav');
-  const rightNav = document.getElementById('right-nav');
+const header = document.getElementById("main-header");
+const logo = document.getElementById("logo-img");
+const logoWrapper = document.getElementById("logo-wrapper");
+const leftNav = document.getElementById("left-nav");
+const rightNav = document.getElementById("right-nav");
 
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY > 100;
+// Scroll range for animation (in px)
+const scrollStart = 0;
+const scrollEnd = 100;
 
-    if (scrolled) {
-      // Shrink header and logo
-      header.classList.add('h-16', 'bg-transparent', 'border-none');
-      header.classList.remove('h-40', 'bg-surface', 'border-b-4', 'border-accent');
+window.addEventListener("scroll", () => {
+  if (window.innerWidth < 768) return; // Only on desktop
 
-      logo.classList.remove('h-20');
-      logo.classList.add('h-10');
+  const scrollY = window.scrollY;
 
-      logoWrapper.classList.remove('top-1/2', '-translate-y-1/2');
-      logoWrapper.classList.add('top-2');
+  // Clamp scroll progress between 0 and 1
+  let progress = (scrollY - scrollStart) / (scrollEnd - scrollStart);
+  progress = Math.min(Math.max(progress, 0), 1);
 
-      // Hide navs
-      leftNav.classList.add('opacity-0', 'pointer-events-none', 'invisible');
-      rightNav.classList.add('opacity-0', 'pointer-events-none', 'invisible');
-    } else {
-      // Restore header and logo
-      header.classList.remove('h-16', 'bg-transparent', 'border-none');
-      header.classList.add('h-40', 'bg-surface', 'border-b-4', 'border-accent');
+  // Interpolate header height: from 10rem (h-40) to 5rem (h-20)
+  const headerMinHeight = 5 * 16; // 5rem in px (80px)
+  const headerMaxHeight = 10 * 16; // 10rem in px (160px)
+  const headerHeight =
+    headerMaxHeight - progress * (headerMaxHeight - headerMinHeight);
+  header.style.height = headerHeight + "px";
 
-      logo.classList.remove('h-10');
-      logo.classList.add('h-20');
+  // Interpolate logo height: from 5rem (80px) to 3rem (48px)
+  const logoMaxHeight = 5 * 16;
+  const logoMinHeight = 3 * 16;
+  const logoHeight = logoMaxHeight - progress * (logoMaxHeight - logoMinHeight);
+  logo.style.height = logoHeight + "px";
 
-      logoWrapper.classList.add('top-1/2', '-translate-y-1/2');
-      logoWrapper.classList.remove('top-2');
+  // Interpolate logo top: from 50% to ~1rem (16px)
+  const logoTopMaxPercent = 50;
+  const logoTopMinPx = 16;
+  // Calculate intermediate top in px (assuming header height as reference)
+  const logoTopPx =
+    (logoTopMaxPercent / 100) * headerMaxHeight -
+    progress * ((logoTopMaxPercent / 100) * headerMaxHeight - logoTopMinPx);
+  logoWrapper.style.top = logoTopPx + "px";
 
-      // Show navs
-      leftNav.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
-      rightNav.classList.remove('opacity-0', 'pointer-events-none', 'invisible');
-    }
-  });
+  // Interpolate logo transform Y from -50% to 0%
+  const translateY = -50 * (1 - progress);
+  logoWrapper.style.transform = `translateX(-50%) translateY(${translateY}%)`;
+
+  // Fade navs out from opacity 1 to 0
+  const navOpacity = 1 - progress;
+  leftNav.style.opacity = navOpacity;
+  rightNav.style.opacity = navOpacity;
+
+  // Toggle pointer-events based on opacity threshold
+  const pointerEventsValue = navOpacity > 0.1 ? "auto" : "none";
+  leftNav.style.pointerEvents = pointerEventsValue;
+  rightNav.style.pointerEvents = pointerEventsValue;
+});
+
